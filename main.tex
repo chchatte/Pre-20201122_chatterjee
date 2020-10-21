@@ -1,0 +1,102 @@
+\documentclass{beamer}
+\usetheme{Boadilla}
+\usecolortheme{beaver}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\setbeamercovered{transparent}
+
+\title{\textbf{2016 RICH indices extraction strategy}}
+\author{Chandradoy Chatterjee}
+\institute{INFN Trieste}
+\titlegraphic{
+   \includegraphics[width=4cm]{figures/INFN_logo.jpg}
+}
+\date{\today}
+
+\definecolor{olive}{rgb}{0.3, 0.4, .1}
+\definecolor{fore}{RGB}{249,242,215}
+\definecolor{back}{RGB}{51,51,51}
+\definecolor{title}{RGB}{255,0,90}
+\definecolor{dgreen}{rgb}{0.,0.6,0.}
+\definecolor{gold}{rgb}{1.,0.84,0.}
+\definecolor{JungleGreen}{cmyk}{0.99,0,0.52,0}
+\definecolor{BlueGreen}{cmyk}{0.85,0,0.33,0}
+\definecolor{RawSienna}{cmyk}{0,0.72,1,0.45}
+\definecolor{Magenta}{cmyk}{0,1,0,0}
+
+\usepackage[font=small,skip=0pt]{caption}
+\begin{document}
+    
+    \begin{frame}[noframenumbering]
+        \titlepage
+    \end{frame}
+    
+    \begin{frame}\frametitle{Outline}
+        \tableofcontents
+    \end{frame}
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+\section{RICH APV issues}
+\tableofcontents[currentsection,currentsubsection]
+    \begin{frame}
+        \frametitle{RICH APV tests}
+            \begin{itemize}
+                \item The analysis suggested by Damien-Igor has been analysed.
+                \item Shuddha has retrieved the information about settings.
+                \item Do we foresee any further meeting with them?
+                \item Which are the tests to be performed in the coming months?
+            \end{itemize}
+    \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{RICH PID progress}
+\tableofcontents[currentsection,currentsubsection]
+\begin{frame}[allowframebreaks]
+    \frametitle{PID progress}
+    As already discussed:
+    The efficiency extraction is based on two steps. First, decay mesons/baryons selection by PHAST user event. Second, use of the efficiency code to extract the efficiencies.\\
+          A further detail study of this efficiency code is made.\\
+    \textbf{Goals:}
+          \begin{itemize}
+              \item To understand and establish the RICH performance from 2016-17 data. 
+              \item To use the analysis chain for the possible use in 2021.
+          \end{itemize}
+            Anything else?\\
+            \framebreak
+            \textbf{Description of the efficiency extraction code:} 
+                \newline There are two steps:
+                \begin{enumerate}
+                    \item To identify one arm based on the LH values.
+                    \item To make a simultaneous fit of the mass spectrum of the other arm to compute the RICH efficiencies and mis-ID probabilities. 
+                \end{enumerate}
+    Situation is not as simple as it sounds! A complex table is generated.\\
+    Assume we want to compute the efficiency of the positive pions. We have identified the negative particle by the RICH information.\\ There can be several possibilities.\\
+        \framebreak
+        Possibilities:
+    \begin{enumerate}
+        \item RICH identify the negative as pion
+        \item RICH identify the negative as kaon
+        \item RICH identify the negative as proton
+        \item The negative particle is unknown, which is either background hypothesis is highest or the LH cuts does not pass.
+    \end{enumerate}
+        For all of these cases the mass spectrum is filled. Then for each of these mass spectrum a \textbf{simultaneous} fit is made. With the underlying assumption that if that particle was a true pion, the fit will show a mass peak. O/w not. If a peak is seen that is the mis-identification.\\
+        Therefore for ($\pi-K-p$) a total of $6\times4$ number 
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{RICH analysis scheme for 2021}
+\tableofcontents[currentsection,currentsubsection]
+\begin{frame}[allowframebreaks]
+    \frametitle{2021 Strategy}
+    \textbf{Preliminary}\\Optimal performance for 2021 can be assured by optimal linking of hardware activities and data analysis.
+    \begin{enumerate}
+        \item To look into the raw data (usual COOOL and Phast DDD) from day 1. First glance at hit maps to ensure detectors' performance and correct extraction of background maps.  \\
+        \item As soon as level 0 alignment is available, to look into theta distributions to see any presence of abnormality is $(n-1)$ distributions and its evolution in momentum and appearance of pathology in time. \\
+        $\rightarrow$ Dedicated person from our side to follow recent evolution of alignment procedure.
+        \framebreak
+        \item At this level the background maps can be studied, this time with much more details.
+        \item Level 1 or improved alignment allows to study LH and mass separations, if this is couple of months later, we still gain time in finding out things we found in 2016-2017.   
+    \end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
